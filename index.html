@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ResumeRank – Smarter Resume Screening</title>
+  <meta name="description" content="Compare resumes with job requirements, identify relevant skills, and discover the strongest candidates faster with ResumeRank.">
+  
+  <!-- Typography: system font stack (no external CDN – fully offline) -->
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar-header">
+    <div class="container navbar-container">
+      <a href="/" class="logo" id="logoLink">
+        <span class="logo-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <path d="m9 15 2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="logo-text">ResumeRank</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/screening" class="btn btn-primary">Start Screening <span class="arrow">&rarr;</span></a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" y1="6" x2="20" y2="6"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="18" x2="20" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="home">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="eyebrow-badge">
+          <span class="eyebrow-text">SMARTER RESUME SCREENING</span>
+        </div>
+
+        <h1 class="hero-title">
+          Find the <span class="highlight-purple">Right Candidate</span> Faster.
+        </h1>
+
+        <p class="hero-subtitle">
+          Compare resumes with job requirements, identify relevant skills, and discover the strongest candidates faster.
+        </p>
+
+        <div class="hero-actions">
+          <a href="/screening" class="btn btn-primary btn-lg">
+            Start Screening <span class="arrow">&rarr;</span>
+          </a>
+          <a href="#how-it-works" class="btn btn-secondary btn-lg">
+            <svg class="play-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            See How It Works
+          </a>
+        </div>
+
+        <!-- Dashboard Preview Card -->
+        <div class="product-preview-card">
+          <div class="mockup-window">
+            
+            <!-- Mini Sidebar -->
+            <aside class="mockup-sidebar">
+              <div class="sidebar-brand">
+                <span class="sidebar-logo-icon">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <path d="m9 15 2 2 4-4"/>
+                  </svg>
+                </span>
+                <span class="sidebar-logo-text">ResumeRank</span>
+              </div>
+
+              <nav class="sidebar-nav">
+                <a href="/screening" class="sidebar-link active" title="View Screening Application">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+                  Dashboard
+                </a>
+                <a href="/screening" class="sidebar-link" title="View Job Descriptions">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                  Job Descriptions
+                </a>
+                <a href="/screening" class="sidebar-link" title="View Candidates">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  Candidates
+                </a>
+                <a href="/screening" class="sidebar-link" title="Start Screening">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  Screening
+                </a>
+                <a href="/screening" class="sidebar-link" title="Reports Preview">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                  Reports
+                </a>
+                <a href="/screening" class="sidebar-link" title="Settings Preview">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                  Settings
+                </a>
+              </nav>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="mockup-content">
+              <!-- Content Header -->
+              <div class="mockup-header">
+                <div>
+                  <h2 class="mockup-title">Screening Results</h2>
+                  <p class="mockup-subtitle">Java Developer</p>
+                </div>
+                <div class="mockup-header-actions">
+                  <a href="/screening" class="mockup-btn-primary">+ Add Candidates</a>
+                  <div class="user-avatar-wrap" title="Recruiter Admin">
+                    <span class="user-avatar">RH</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <div class="mockup-table-container">
+                <table class="mockup-table">
+                  <thead>
+                    <tr>
+                      <th>Candidate</th>
+                      <th>Match</th>
+                      <th>Skills Matched</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- Row 1 -->
+                    <tr>
+                      <td>
+                        <div class="candidate-cell">
+                          <span class="avatar-circle avatar-purple">A</span>
+                          <div>
+                            <div class="candidate-name">Arun Kumar</div>
+                            <div class="candidate-email">arun.kumar@email.com</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="score-cell">
+                          <span class="score-value">94%</span>
+                          <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 94%;"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="skills-count">5/5</span>
+                      </td>
+                      <td>
+                        <span class="status-badge status-excellent">Excellent Match</span>
+                      </td>
+                    </tr>
+
+                    <!-- Row 2 -->
+                    <tr>
+                      <td>
+                        <div class="candidate-cell">
+                          <span class="avatar-circle avatar-purple">P</span>
+                          <div>
+                            <div class="candidate-name">Priya Sharma</div>
+                            <div class="candidate-email">priya.sharma@email.com</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="score-cell">
+                          <span class="score-value">87%</span>
+                          <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 87%;"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="skills-count">4/5</span>
+                      </td>
+                      <td>
+                        <span class="status-badge status-strong">Strong Match</span>
+                      </td>
+                    </tr>
+
+                    <!-- Row 3 -->
+                    <tr>
+                      <td>
+                        <div class="candidate-cell">
+                          <span class="avatar-circle avatar-purple">K</span>
+                          <div>
+                            <div class="candidate-name">Karthik Raj</div>
+                            <div class="candidate-email">karthik.raj@email.com</div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="score-cell">
+                          <span class="score-value">76%</span>
+                          <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 76%;"></div>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="skills-count">4/5</span>
+                      </td>
+                      <td>
+                        <span class="status-badge status-good">Good Match</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section problem-section">
+      <div class="container">
+        <h2 class="section-heading text-center">
+          Recruiting shouldn't mean reviewing hundreds of resumes manually.
+        </h2>
+
+        <div class="grid grid-3 problem-grid">
+          <!-- Item 1 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrap">
+              <span class="problem-number">01</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="problem-title">Too Much Manual Work</h3>
+            <p class="problem-desc">
+              Reviewing large numbers of resumes takes valuable time and effort.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrap">
+              <span class="problem-number">02</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="problem-title">Inconsistent Screening</h3>
+            <p class="problem-desc">
+              Manual screening can lead to unfair comparisons and missed talent.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="problem-card">
+            <div class="problem-icon-wrap">
+              <span class="problem-number">03</span>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h3 class="problem-title">Slow Candidate Discovery</h3>
+            <p class="problem-desc">
+              Finding the right candidates becomes harder as applications increase.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <h2 class="section-heading text-center">
+          Everything you need for <span class="highlight-purple">faster</span> screening.
+        </h2>
+
+        <div class="grid grid-2 features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <circle cx="11.5" cy="14.5" r="2.5"/>
+                <line x1="13.25" y1="16.25" x2="16.5" y2="19.5"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Resume Matching</h3>
+            <p class="feature-desc">
+              Compare resumes with job requirements and identify the best fit.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <circle cx="12" cy="12" r="6"/>
+                <circle cx="12" cy="12" r="2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Transparent Scoring</h3>
+            <p class="feature-desc">
+              Understand how every candidate score is calculated.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/>
+                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/>
+                <path d="M4 22h16"/>
+                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/>
+                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/>
+                <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Candidate Ranking</h3>
+            <p class="feature-desc">
+              Quickly identify the top candidates with accurate rankings.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6" y1="20" x2="6" y2="14"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Detailed Insights</h3>
+            <p class="feature-desc">
+              See matched skills, missing requirements, and detailed candidate insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section how-it-works-section" id="how-it-works">
+      <div class="container">
+        <h2 class="section-heading text-center">
+          How it works
+        </h2>
+
+        <div class="steps-flow">
+          <!-- Step 1 -->
+          <div class="step-item">
+            <div class="step-badge">01</div>
+            <h3 class="step-title">Add Job Description</h3>
+            <p class="step-desc">Paste the job description and define key requirements.</p>
+          </div>
+
+          <div class="step-connector">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-item">
+            <div class="step-badge">02</div>
+            <h3 class="step-title">Add Resumes</h3>
+            <p class="step-desc">Upload resumes in bulk or individually.</p>
+          </div>
+
+          <div class="step-connector">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-item">
+            <div class="step-badge">03</div>
+            <h3 class="step-title">Screen Candidates</h3>
+            <p class="step-desc">Our system analyzes and scores each candidate.</p>
+          </div>
+
+          <div class="step-connector">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-item">
+            <div class="step-badge">04</div>
+            <h3 class="step-title">Review Rankings</h3>
+            <p class="step-desc">Review results and choose the best candidates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="section cta-section" id="get-started">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-content">
+            <h2 class="cta-title">Ready to screen smarter?</h2>
+            <p class="cta-desc">
+              Compare resumes with job requirements and discover relevant candidates faster.
+            </p>
+          </div>
+          <div class="cta-action">
+            <a href="/screening" class="btn btn-primary btn-lg">
+              Start Screening <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="about">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <span class="logo-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <path d="m9 15 2 2 4-4"/>
+              </svg>
+            </span>
+            <span class="logo-text">ResumeRank</span>
+          </a>
+          <p class="footer-tagline">Smarter screening. Better hires.</p>
+        </div>
+
+        <nav class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#about">About</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ResumeRank. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
